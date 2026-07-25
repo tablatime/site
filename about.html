@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+:root {
+    --accent: #0f766e;
+}
+
+.top-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.top-nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.top-nav a:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.top-nav a.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Only change: make the picture smaller and fit better */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-image img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h2 class="logo">The Bay Area Tabla Initiative</h2>
+
+<nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="classes.html">Classes</a>
+    <a href="video-course.html">Online Course</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<section class="page container">
+
+<h1>About the Initiative</h1>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<h2>Mission</h2>
+
+<p>
+My name is Param Patel, and I am a high school student from San Mateo, currently attending Junípero Serra High School. I started this initiative after learning tabla for several years and wanting to share it with others in my community.
+</p>
+
+<p>
+My goal is to teach basic tabla to younger kids in a simple, structured way. The classes are designed for beginners or kids who have never played before, with no prior experience needed, and focus on an introduction to rhythm and technique step by step. My goal is not to be an experienced teacher, but to share the art with younger students and hopefully inspire them to continue learning the instrument in the future.
+</p>
+
+<p>
+This program is focused on making tabla more accessible and giving kids a consistent opportunity to learn, practice, and develop an understanding of the instrument over time.
+</p>
+
+</div>
+
+<div class="about-image">
+<img src="images/aboutpic.jpg" alt="Tabla initiative">
+</div>
+
+</div>
+
+<div class="card" style="margin-top:50px;">
+
+<h2>What We Offer</h2>
+
+<ul>
+<li>Free beginner-friendly tabla classes</li>
+<li>No previous experience required</li>
+<li>Step-by-step introduction to rhythm and technique</li>
+<li>Supportive learning environment for younger students</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 The Bay Area Tabla Initiative</p>
+</footer>
+
+</body>
+</html>
