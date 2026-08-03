@@ -44,7 +44,7 @@
     border-color: var(--accent);
 }
 
-/* BUTTON (bubble style) */
+/* BUTTON */
 .button {
     display: inline-block;
     padding: 10px 14px;
@@ -59,6 +59,29 @@
 .button:hover {
     background: var(--accent);
     color: white;
+}
+
+/* COMPLETED CLASS */
+.card.completed {
+    border: 2px solid #d1d5db;
+    background: #fafafa;
+}
+
+.status-banner {
+    display: inline-block;
+    margin: 16px 0;
+    padding: 10px 18px;
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    letter-spacing: 0.05em;
+}
+
+.completed-note {
+    color: #555;
+    margin-bottom: 20px;
 }
 </style>
 
@@ -90,22 +113,32 @@
 
 <h1>Classes</h1>
 
-<div class="card">
+<div class="card completed">
 
 <h2>Kid’s Tabla Introduction Workshop</h2>
 
-<p>Saturday • 10:00 AM – 11:00 AM</p>
+<p><strong>Saturday • 10:00 AM – 11:00 AM</strong></p>
 
 <p>Sanatan Mandir, San Bruno</p>
 
 <p>Free • 4-week introductory course</p>
 
-<a href="class-details.html" class="button">
-Learn More & Register
+<div class="status-banner">
+    ✓ This Workshop Has Concluded
+</div>
+
+<p class="completed-note">
+    Thank you to everyone who participated! Registration for this workshop is now closed.
+    Please check back soon for future classes and workshops.
+</p>
+
+<a href="contact.html" class="button">
+    Contact Us for Upcoming Classes
 </a>
 
 </div>
 
-</body>
+</section>
 
+</body>
 </html>
