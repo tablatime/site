@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,6 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Top navigation boxy style (TEAL #0f766e) -->
     <style>
         .top-nav {
             display: flex;
@@ -37,8 +37,85 @@
             background: #0f766e;
             color: white;
         }
+
+        /* Reviews Section */
+        .reviews {
+            margin: 60px auto;
+        }
+
+        .reviews h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .reviews > p {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .review-card video {
+            width: 100%;
+            height: 260px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #f5f5f5;
+        }
+
+        .review-card h3 {
+            color: #0f766e;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .review-quote {
+            margin-top: 18px;
+            font-size: 16px;
+            font-style: italic;
+            color: #444;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        .review-quote::before {
+            content: "“";
+            font-size: 30px;
+            color: #0f766e;
+        }
+
+        .review-quote::after {
+            content: "”";
+            font-size: 30px;
+            color: #0f766e;
+        }
+
+        .review-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 900px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 
 <body>
 
@@ -58,8 +135,10 @@
     </div>
 </header>
 
+
 <section class="hero">
     <div class="container">
+
         <h1>Learn Tabla. Build Community.</h1>
 
         <p>
@@ -68,8 +147,10 @@
         </p>
 
         <a href="classes.html" class="button">View Classes</a>
+
     </div>
 </section>
+
 
 <section class="cards container">
 
@@ -87,6 +168,87 @@
         <h2>Inclusive</h2>
         <p>People of all backgrounds are welcome.</p>
     </div>
+
+</section>
+
+
+<section class="reviews container">
+
+    <h2>Hear From Community</h2>
+
+    <p>
+        Parents, students, and community members share their experiences with the initiative.
+    </p>
+
+
+    <div class="reviews-grid">
+
+
+        <div class="review-card">
+
+            <h3>Parent Testimonial</h3>
+
+            <video controls>
+                <source src="images/Review Edited 1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p class="review-quote">
+                An engaging and enriching experience for children.
+            </p>
+
+            <p class="review-name">
+                — Nikhil, father of Jojo, age 12
+            </p>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <h3>Parent Testimonial</h3>
+
+            <video controls>
+                <source src="images/Review Edited 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p class="review-quote">
+                Taught with patience while still challenging students and helping them enjoy the class.
+            </p>
+
+            <p class="review-name">
+                — Venkut, father of Ovin, age 5
+            </p>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <h3>Community Support</h3>
+
+            <video controls>
+                <source src="images/Review Edited 3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p class="review-quote">
+                A great class for new learners who want to explore tabla in a welcoming environment.
+            </p>
+
+            <p class="review-name">
+                — Ben Mahabir<br>
+                President of Sanatan Mandir
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
 
 <script src="js/script.js"></script>
 
