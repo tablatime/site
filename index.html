@@ -2,264 +2,447 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <title>Bay Area Tabla Initiative</title>
+<title>Bay Area Tabla Initiative</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
-    <style>
-        .top-nav {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
+<style>
 
-        .top-nav a {
-            display: inline-block;
-            padding: 8px 14px;
-            border: 2px solid #0f766e;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #0f766e;
-            font-weight: 500;
-            transition: all .2s ease;
-        }
+.top-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
 
-        .top-nav a:hover,
-        .top-nav a.active {
-            background: #0f766e;
-            color: white;
-        }
+.top-nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 2px solid #0f766e;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #0f766e;
+    font-weight: 500;
+    transition: all .2s ease;
+}
 
-        .reviews {
-            margin: 60px auto;
-        }
+.top-nav a:hover,
+.top-nav a.active {
+    background: #0f766e;
+    color: white;
+}
 
-        .reviews h2 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
 
-        .reviews > p {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+/* WHY TABLA */
 
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.why-tabla {
+    padding: 60px 0 10px;
+    text-align: center;
+}
 
-        .review-card {
-            background: white;
-            border-radius: 14px;
-            padding: 18px;
-            box-shadow: 0 3px 10px rgba(0,0,0,.1);
-            text-align: center;
-        }
+.why-tabla h2 {
+    color: #0f766e;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
 
-        .review-card iframe {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 10px;
-            border: none;
-            background: #f5f5f5;
-        }
+.why-intro {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+}
 
-        .review-card h3 {
-            color: #0f766e;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
 
-        .review-quote {
-            margin-top: 18px;
-            font-size: 16px;
-            font-style: italic;
-            color: #444;
-            line-height: 1.5;
-        }
+.benefit {
+    background: #f8fbfb;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .25s;
+    border-top: 5px solid #0f766e;
+}
 
-        .review-quote::before {
-            content: "“";
-            font-size: 30px;
-            color: #0f766e;
-        }
+.benefit:hover {
+    transform: translateY(-6px);
+}
 
-        .review-quote::after {
-            content: "”";
-            font-size: 30px;
-            color: #0f766e;
-        }
+.benefit h3 {
+    color: #0f766e;
+    margin-bottom: 12px;
+}
 
-        .review-name {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #777;
-        }
+.benefit p {
+    color: #555;
+    line-height: 1.6;
+}
 
-        @media (max-width: 900px) {
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+
+/* REVIEWS */
+
+.reviews {
+    margin: 0 auto 60px;
+    background: #0f766e;
+    padding: 55px 40px;
+    border-radius: 22px;
+}
+
+.reviews h2 {
+    color: white;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.reviews > p {
+    color: rgba(255,255,255,.9);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    transition: .25s;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+}
+
+.review-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: none;
+    background: #f5f5f5;
+}
+
+.review-card h3 {
+    color: #0f766e;
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+.review-quote {
+    margin-top: 20px;
+    font-size: 17px;
+    font-style: italic;
+    color: #333;
+    line-height: 1.7;
+}
+
+.review-quote::before {
+    content: "“";
+    font-size: 34px;
+    color: #0f766e;
+}
+
+.review-quote::after {
+    content: "”";
+    font-size: 34px;
+    color: #0f766e;
+}
+
+.review-name {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+
+@media(max-width:900px){
+
+.reviews-grid {
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
+
 <header>
-    <div class="container">
 
-        <h2 class="logo">Bay Area Tabla Initiative</h2>
+<div class="container">
 
-        <nav class="top-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="classes.html">Classes</a>
-            <a href="video-course.html">Online Course</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<h2 class="logo">
+Bay Area Tabla Initiative
+</h2>
 
-    </div>
+
+<nav class="top-nav">
+
+<a href="index.html" class="active">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="classes.html">Classes</a>
+
+<a href="video-course.html">Online Course</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
 </header>
 
 
+
 <section class="hero">
-    <div class="container">
 
-        <h1>Learn Tabla. Build Community.</h1>
+<div class="container">
 
-        <p>
-            A welcoming project-based community focused on teaching children
-            tabla through accessible in-person and online workshops.
-        </p>
-
-        <a href="classes.html" class="button">View Classes</a>
-
-    </div>
-</section>
+<h1>
+Learn Tabla. Build Community.
+</h1>
 
 
-<section class="cards container">
+<p>
+A welcoming project-based community focused on teaching children
+tabla through accessible in-person and online workshops.
+</p>
 
-    <div class="card">
-        <h2>Beginner Friendly</h2>
-        <p>No experience required, no pressure.</p>
-    </div>
 
-    <div class="card">
-        <h2>Community Focused</h2>
-        <p>Children can learn together in an encouraging environment.</p>
-    </div>
+<a href="classes.html" class="button">
+View Classes
+</a>
 
-    <div class="card">
-        <h2>Inclusive</h2>
-        <p>People of all backgrounds are welcome.</p>
-    </div>
+
+</div>
 
 </section>
 
 
 
+<section class="why-tabla container">
+
+<h2>
+Why Tabla for Kids?
+</h2>
+
+
+<p class="why-intro">
+
+Learning tabla helps children develop concentration,
+coordination, confidence, and discipline while connecting
+with Indian classical music.
+
+</p>
+
+
+<div class="benefits-grid">
+
+
+<div class="benefit">
+
+<h3>
+Improves Focus
+</h3>
+
+<p>
+Rhythm practice strengthens concentration, listening,
+and memory skills.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+Builds Coordination
+</h3>
+
+<p>
+Students develop timing, hand coordination,
+and musical awareness.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+Builds Confidence
+</h3>
+
+<p>
+Performing and learning new rhythms helps children
+grow confidence.
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<h3>
+Creates Community
+</h3>
+
+<p>
+Students learn together in a supportive environment.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
 <section class="reviews container">
 
-    <h2>Hear From Community</h2>
-
-    <p>
-        Parents, students, and community members share their experiences with the initiative.
-    </p>
+<h2>
+What Parents and Students Are Saying
+</h2>
 
 
-    <div class="reviews-grid">
-
-
-        <div class="review-card">
-
-            <h3>Parent Testimonial</h3>
-
-            <iframe
-                src="https://www.youtube.com/embed/Hz_1rO6AMuE?rel=0"
-                title="Parent Testimonial"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-
-            <p class="review-quote">
-                An engaging and enriching experience for children.
-            </p>
-
-            <p class="review-name">
-                — Nikhil, father of Jojo, age 12
-            </p>
-
-        </div>
+<p>
+Parents, students, and community members share their experiences
+with the Bay Area Tabla Initiative.
+</p>
 
 
 
-        <div class="review-card">
-
-            <h3>Parent Testimonial</h3>
-
-            <iframe
-                src="https://www.youtube.com/embed/ggUJnrNZs4I?rel=0"
-                title="Parent Testimonial"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-
-            <p class="review-quote">
-                Taught with patience while still challenging students and helping them enjoy the class.
-            </p>
-
-            <p class="review-name">
-                — Venkat, father of Ovin, age 5
-            </p>
-
-        </div>
+<div class="reviews-grid">
 
 
 
-        <div class="review-card">
+<div class="review-card">
 
-            <h3>Community Support</h3>
-
-            <iframe
-                src="https://www.youtube.com/embed/Ckc8j9rwbxM?rel=0"
-                title="Community Support"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-
-            <p class="review-quote">
-                A great class for new learners who want to explore tabla in a welcoming environment.
-            </p>
-
-            <p class="review-name">
-                — Ben Mahabir<br>
-                President of Sanatan Mandir
-            </p>
-
-        </div>
+<h3>
+Parent Testimonial
+</h3>
 
 
-    </div>
+<iframe
+src="https://www.youtube.com/embed/Hz_1rO6AMuE?rel=0"
+title="Parent Testimonial"
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+
+<p class="review-quote">
+An engaging and enriching experience for children.
+</p>
+
+
+<p class="review-name">
+— Nikhil, father of Jojo, age 12
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="review-card">
+
+<h3>
+Parent Testimonial
+</h3>
+
+
+<iframe
+src="https://www.youtube.com/embed/ggUJnrNZs4I?rel=0"
+title="Parent Testimonial"
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+
+<p class="review-quote">
+Taught with patience while still challenging students and helping them enjoy the class.
+</p>
+
+
+<p class="review-name">
+— Venkat, father of Ovin, age 5
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="review-card">
+
+<h3>
+Community Support
+</h3>
+
+
+<iframe
+src="https://www.youtube.com/embed/Ckc8j9rwbxM?rel=0"
+title="Community Support"
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+
+<p class="review-quote">
+A great class for new learners who want to explore tabla in a welcoming environment.
+</p>
+
+
+<p class="review-name">
+— Ben Mahabir<br>
+President of Sanatan Mandir
+</p>
+
+
+</div>
+
+
+</div>
 
 </section>
+
 
 
 <script src="js/script.js"></script>
 
+
 </body>
+
 </html>
